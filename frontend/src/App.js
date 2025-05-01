@@ -9,7 +9,6 @@ function App() {
     <Router>
       <div className='App'>
         <header>
-          <a>This is the header</a>
           <MyNavbar />
           <Routes>
           <Route path="/contact" element={<Contact />} />
