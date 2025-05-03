@@ -1,16 +1,29 @@
 import React from 'react';
+import githubIcon from '../assets/github.png'; // Adjust path based on your file structure
+import linkedinIcon from '../assets/linkedin.png'; 
 
 const MyFooter = () => {
   return (
     <>
       {/*This creates a solid line*/}
-      <div style={{ borderTop: "1px solid #ccc", marginTop: "2rem" }}> 
-
-      </div>
+      <div style={{ borderTop: "1px solid #ccc", marginTop: "2rem" }}> </div>
       
       <footer style={{ padding: "1rem" }}>
+        {/*Logo */}
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
+          <span>Contact me: bchan36@calpoly.edu</span>
+        </div>
 
-        © Copyright 2025. Made by Bill Chan 
+        {/* Social Media Icons */}
+        <a href="https://github.com/bchan760" target="_blank" rel="noopener noreferrer">
+          <img src={githubIcon} alt="GitHub" style={{ height: "24px" }} />
+        </a>
+        <a href="https://www.linkedin.com/in/bill-chan1/" target="_blank" rel="noopener noreferrer">
+          <img src={linkedinIcon} alt="LinkedIn" style={{ height: "24px" }} />
+        </a>
+
+        <div>Web Designer and full stack developer</div>
+        <p>© Copyright 2025. Made by Bill Chan</p> 
       </footer>
     </>
   );

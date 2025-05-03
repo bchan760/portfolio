@@ -6,8 +6,10 @@ const MyNavbar = () => {
       {/* logo */}
       <a href="/" style={{ marginRight: "1rem" }}>Home</a>
       {/* works */}
+      <a href="/works" style={{ marginRight: "1rem" }}>#works</a>
       {/* about-me */}
-      <a href="/contact">Contact</a>
+      <a href="/about-me" style={{ marginRight: "1rem" }}>about-me</a>
+      <a href="/contact" style={{ marginRight: "1rem" }}>#contact</a>
       {/*drop down menu */}
     </nav>
   );
