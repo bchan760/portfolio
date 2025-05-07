@@ -1,4 +1,5 @@
 import React from 'react';
+import './MyFooter.css';
 import githubIcon from '../assets/github.png'; // Adjust path based on your file structure
 import linkedinIcon from '../assets/linkedin.png'; 
 
@@ -15,6 +16,7 @@ const MyFooter = () => {
         </div>
 
         {/* Social Media Icons */}
+        <div>Social Media</div>
         <a href="https://github.com/bchan760" target="_blank" rel="noopener noreferrer">
           <img src={githubIcon} alt="GitHub" style={{ height: "24px" }} />
         </a>
