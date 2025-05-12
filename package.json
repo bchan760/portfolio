@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"cd backend && npm start\" \"cd frontend-vite && npm start\""
+    "dev": "concurrently \"cd backend && npm start\" \"cd frontend-vite && npm run dev\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "concurrently": "^9.1.2",
     "react-router-dom": "^7.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }
