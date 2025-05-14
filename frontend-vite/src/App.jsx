@@ -7,7 +7,7 @@ import MyFooter from './components/MyFooter';
 function App() {
   return (
     <Router>
-      <div className='App'>
+      <div dark:text-white>
         <header>
           <MyNavbar />
           <Routes>
@@ -15,9 +15,11 @@ function App() {
           {/* <Route path="/about_me" element={<About-me />} /> */}
           </Routes>
         </header>
-        <main>
 
+        <main>
+          {/* Something something add something here */}
         </main>
+
         <footer>
           <MyFooter />
         </footer>

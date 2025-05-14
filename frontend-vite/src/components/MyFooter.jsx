@@ -1,31 +1,34 @@
 import React from 'react';
-import './MyFooter.css';
-import githubIcon from '../assets/github.png'; // Adjust path based on your file structure
-import linkedinIcon from '../assets/linkedin.png'; 
+import githubIcon from '../assets/github.png';
+import linkedinIcon from '../assets/linkedin.png';
 
 const MyFooter = () => {
   return (
     <>
-      {/*This creates a solid line*/}
-      <div style={{ borderTop: "1px solid #ccc", marginTop: "2rem" }}> </div>
-      
-      <footer style={{ padding: "1rem" }}>
-        {/*Logo */}
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
+      {/* Divider Line */}
+      <div className="border-t border-[#C778DD] mt-8"></div>
+
+      <footer className="p-4 text-center text-gray-800 dark:text-white dark:bg-gray-900">
+        {/* Contact Info */}
+        <div className="flex justify-center items-center gap-4 flex-wrap mb-4">
+          <span className="font-semibold">Bill</span>
           <span>Contact me: bchan36@calpoly.edu</span>
         </div>
 
-        {/* Social Media Icons */}
-        <div>Social Media</div>
-        <a href="https://github.com/bchan760" target="_blank" rel="noopener noreferrer">
-          <img src={githubIcon} alt="GitHub" style={{ height: "24px" }} />
-        </a>
-        <a href="https://www.linkedin.com/in/bill-chan1/" target="_blank" rel="noopener noreferrer">
-          <img src={linkedinIcon} alt="LinkedIn" style={{ height: "24px" }} />
-        </a>
+        {/* Social Media */}
+        <div className="mb-2">Social Media</div>
+        <div className="flex justify-center gap-4 mb-4">
+          <a href="https://github.com/bchan760" target="_blank" rel="noopener noreferrer">
+            <img src={githubIcon} alt="GitHub" className="h-6" />
+          </a>
+          <a href="https://www.linkedin.com/in/bill-chan1/" target="_blank" rel="noopener noreferrer">
+            <img src={linkedinIcon} alt="LinkedIn" className="h-6" />
+          </a>
+        </div>
 
-        <div>Web Designer and full stack developer</div>
-        <p>© Copyright 2025. Made by Bill Chan</p> 
+        {/* Footer Text */}
+        <div className="mb-1">Web Designer and Full Stack Developer</div>
+        <p className="text-sm">&copy; 2025. Made by Bill Chan</p>
       </footer>
     </>
   );
