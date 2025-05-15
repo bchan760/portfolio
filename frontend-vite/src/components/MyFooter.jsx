@@ -6,28 +6,28 @@ const MyFooter = () => {
   return (
     <>
       {/* Divider Line */}
-      <div className="border-t border-[#C778DD] mt-8"></div>
+      <div className="footer-divider"></div>
 
-      <footer className="p-4 text-center text-gray-800 dark:text-white dark:bg-[#2A3132]">
-        <div className="flex justify-between items-center flex-wrap gap-4">
+      <footer className="footer">
+        <div className="footer-section">
           {/* Contact Info (left)*/}
-          <div className="flex items-center gap-4">
+          <div className="footer-spacing">
             <span className="font-semibold">Bill</span>
             <span>Contact me: bchan36@calpoly.edu</span>
           </div>
 
           {/* Social Media text(right)*/}
-          <div className="flex items-center gap-4">
+          <div className="footer-spacing">
             <span>Social Media</span>
           </div>
         </div>
 
-        <div className="flex justify-between items-center flex-wrap mt-4">
+        <div className="footer-section">
           {/* Web Developer Title (left) */}
           <div>Web Designer and Full Stack Developer</div>
 
           {/* Social Media icons (right) */}
-          <div className="flex gap-4">
+          <div className="footer-icons">
             <a href="https://github.com/bchan760" target="_blank" rel="noopener noreferrer">
               <img src={githubIcon} alt="GitHub" className="h-6" />
             </a>
@@ -37,8 +37,8 @@ const MyFooter = () => {
           </div>
         </div>
 
-        {/* Footer Text */}
-        <p className="text-sm">&copy; 2025. Made by Bill Chan</p>
+        {/* Footer Copyright Text */}
+        <p className="text-sm">&copy; {new Date().getFullYear()}. Made by Bill Chan</p>
       </footer>
     </>
   );
