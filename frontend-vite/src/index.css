@@ -6,6 +6,10 @@
   html {
     font-size: 16px;
   }
+
+  .dark-bg-color {
+    @apply bg-[#2A3132];
+  }
 }
 
 @layer components {
@@ -27,5 +31,9 @@
 
   .footer-spacing {
     @apply flex gap-4 items-center;
+  }
+
+  .navbar-theme-toggle {
+    @apply border px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition;
   }
 }
