@@ -32,12 +32,12 @@ const MyNavbar = () => {
   };
   
   return (
-    <nav className="bg-gray-100 dark:bg-[#2A3132] p-4">
-      <div className="flex justify-end items-center space-x-4 text-gray-800 dark:text-white">
-        <a href="/" className="hover:underline">home</a>
-        <a href="/works" className="hover:underline">#my-works</a>
-        <a href="/about-me" className="hover:underline">about-me</a>
-        <a href="/contact" className="hover:underline">#contact-me</a>
+    <nav className="navbar">
+      <div className="navbar-theme">
+        <a href="/" className="text_underline">home</a>
+        <a href="/works" className="text_underline">#my-works</a>
+        <a href="/about-me" className="text_underline">about-me</a>
+        <a href="/contact" className="text_underline">#contact-me</a>
 
         {/* Theme Toggle Button */}
         <button onClick={toggleTheme} className="navbar-theme-toggle">

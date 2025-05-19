@@ -33,7 +33,19 @@
     @apply flex gap-4 items-center;
   }
 
+  .navbar {
+    @apply bg-gray-100 dark:bg-[#2A3132] p-4;
+  }
+
+  .navbar-theme {
+    @apply flex justify-end items-center space-x-4 text-gray-800 dark:text-white;
+  }
+
   .navbar-theme-toggle {
     @apply border px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition;
+  }
+
+  .text_underline{
+    @apply hover:underline;
   }
 }
