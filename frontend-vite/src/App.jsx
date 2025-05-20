@@ -1,6 +1,7 @@
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Contact from './pages/Contact';
+import About from './pages/About'
 import MyNavbar from './components/MyNavbar';
 import MyFooter from './components/MyFooter';
 
@@ -11,7 +12,8 @@ function App() {
         <header>
           <MyNavbar />
           <Routes>
-          <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about-me"element={<About />}/>
           {/* <Route path="/about_me" element={<About-me />} /> */}
           </Routes>
         </header>

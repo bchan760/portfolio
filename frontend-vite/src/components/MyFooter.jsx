@@ -13,7 +13,7 @@ const MyFooter = () => {
           {/* Contact Info (left)*/}
           <div className="footer-spacing">
             <span className="font-semibold">Bill</span>
-            <span>Contact me: bchan36@calpoly.edu</span>
+            <span className="text-underline">Contact me: bchan36@calpoly.edu</span>
           </div>
 
           {/* Social Media text(right)*/}

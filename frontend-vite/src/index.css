@@ -5,10 +5,33 @@
 @layer base {
   html {
     font-size: 16px;
+    scroll-behavior: smooth;
   }
 
   .dark-bg-color {
     @apply bg-[#2A3132];
+  }
+
+  .sect-spacing {
+    @apply mb-12;
+  }
+
+  .my-purple {
+    @apply text-[#C778DD];
+  }
+}
+
+@layer text-types {
+  .base-text {
+      @apply text-white dark:text-black;
+  }
+
+  .page-title-size {
+    @apply text-4xl font-bold mb-4;
+  }
+
+  .h2-text-size{
+    @apply text-2xl font-bold mb-2;
   }
 }
 
@@ -45,7 +68,11 @@
     @apply border px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition;
   }
 
-  .text_underline{
+  .text-underline{
     @apply hover:underline;
   }
+}
+
+@layer pages {
+
 }

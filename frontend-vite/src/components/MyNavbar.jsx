@@ -34,10 +34,10 @@ const MyNavbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-theme">
-        <a href="/" className="text_underline">home</a>
-        <a href="/works" className="text_underline">#my-works</a>
-        <a href="/about-me" className="text_underline">about-me</a>
-        <a href="/contact" className="text_underline">#contact-me</a>
+        <a href="/" className="text-underline">home</a>
+        <a href="/works" className="text-underline">#my-works</a>
+        <a href="/about-me" className="text-underline">about-me</a>
+        <a href="/contact" className="text-underline">#contact-me</a>
 
         {/* Theme Toggle Button */}
         <button onClick={toggleTheme} className="navbar-theme-toggle">
