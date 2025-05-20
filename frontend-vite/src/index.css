@@ -21,7 +21,7 @@
   }
 }
 
-@layer text-types {
+@layer utilities {
   .base-text {
       @apply text-white dark:text-black;
   }
@@ -30,8 +30,11 @@
     @apply text-4xl font-bold mb-4;
   }
 
-  .h2-text-size{
-    @apply text-2xl font-bold mb-2;
+  .h1-text-size {
+    @apply text-4xl font-bold mb-4;
+  }
+  .h2-text-size { 
+    @apply text-2xl font-semibold mb-2;
   }
 }
 
@@ -71,8 +74,4 @@
   .text-underline{
     @apply hover:underline;
   }
-}
-
-@layer pages {
-
 }

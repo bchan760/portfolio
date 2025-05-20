@@ -38,7 +38,7 @@ const About = () => {
       </section>
 
       <section>
-        <h2 className="h2-text">Outside of Code</h2>
+        <h2 className="h2-text-size">Outside of Code</h2>
         <p className="base-text">
           When I’m not coding, I enjoy music, gaming, cooking, and running.
         </p>
