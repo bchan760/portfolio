@@ -1,9 +1,10 @@
 import React from "react";
+import Card from "../components/Card";
 
 const About = () => {
   return (
-    <div className="p-8 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold mb-4">
+    <div className="about-centering">
+      <h1 className="h1-text-size">
         <span className="my-purple">/</span>about-me
       </h1>
 
@@ -29,12 +30,24 @@ const About = () => {
 
       <section className="sect-spacing">
         <h2 className="h2-text-size">Skills</h2>
-        <ul className="list-disc list-inside base-text">
-          <li>React.js</li>
-          <li>Node.js</li>
-          <li>Tailwind CSS</li>
-          <li>Python, etc.</li>
-        </ul>
+        <div className="in-line-row">
+          <Card
+            title="Languages"
+            skills={["JavaScript", "Python", "Java"]}
+          />
+          <Card
+            title="Frameworks"
+            skills={["React", "Next.js", "Express"]}
+          />
+          <Card
+            title="Technologies"
+            skills={["Tailwind CSS", "Git", "REST APIs"]}
+          />
+          <Card
+            title="Databases"
+            skills={["MongoDB", "PostgreSQL", "Firebase"]}
+          />
+        </div>
       </section>
 
       <section>

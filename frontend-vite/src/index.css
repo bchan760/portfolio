@@ -36,6 +36,18 @@
   .h2-text-size { 
     @apply text-2xl font-semibold mb-2;
   }
+
+  .text-underline{
+    @apply hover:underline;
+  }
+
+  .in-line-row {
+    @apply flex flex-wrap gap-6;
+  }
+
+  .about-centering {
+    @apply p-8 max-w-4xl mx-auto;
+  }
 }
 
 @layer components {
@@ -71,7 +83,11 @@
     @apply border px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition;
   }
 
-  .text-underline{
-    @apply hover:underline;
+  .card-bg {
+    @apply bg-[#1E1E1E] rounded-xl p-4 shadow-md;
+  }
+
+  .card-title {
+    @apply text-xl font-semibold text-[#C778DD] mb-2;
   }
 }
