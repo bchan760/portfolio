@@ -56,7 +56,7 @@
   }
 
   .footer-divider {
-    @apply border-t border-[#98A2B3] mt-8;
+    @apply fixed bottom-full left-0 right-0 border-t border-[#98A2B3] mt-8;
   }
 
   .footer-icons {

@@ -32,7 +32,7 @@ const VerticalNav = ({ activeSection, sections }) => {
             }`}
             title={section.title}
           >
-            <div className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            <div className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
               {section.title}
             </div>
           </button>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const MyNavbar = () => {
+const HeaderNav = () => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -48,4 +48,4 @@ const MyNavbar = () => {
   );
 };
 
-export default MyNavbar;
+export default HeaderNav;
