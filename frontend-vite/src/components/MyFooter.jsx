@@ -1,14 +1,13 @@
-import React from 'react';
 import githubIcon from '../assets/github.png';
 import linkedinIcon from '../assets/linkedin.png';
 
 const MyFooter = () => {
   return (
     <>
-      {/* Divider Line */}
-      <div className="footer-divider"></div>
-
       <footer className="footer">
+        {/* Divider Line */}
+        <div className="footer-divider"></div>
+        
         <div className="footer-section">
           {/* Contact Info (left)*/}
           <div className="footer-spacing">

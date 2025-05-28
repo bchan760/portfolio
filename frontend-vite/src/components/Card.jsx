@@ -1,5 +1,3 @@
-import React from "react";
-
 const Card = ({ title, skills }) => {
   return (
     <div className="card-bg">

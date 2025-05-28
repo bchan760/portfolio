@@ -45,7 +45,7 @@ const About = () => {
           />
           <Card
             title="Databases"
-            skills={["MongoDB", "PostgreSQL", "Firebase"]}
+            skills={["MongoDB", "PostgreSQL"]}
           />
         </div>
       </section>

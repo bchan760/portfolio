@@ -4,28 +4,27 @@ import Contact from './pages/Contact';
 import About from './pages/About'
 import MyNavbar from './components/MyNavbar';
 import MyFooter from './components/MyFooter';
+import Landing from './pages/Landing';
 
 function App() {
   return (
     <Router>
-      <div dark:text-white>
+      <div className='dark:text-white'>
         <header>
           <MyNavbar />
-          <Routes>
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about-me"element={<About />}/>
-          {/* <Route path="/about_me" element={<About-me />} /> */}
-          </Routes>
         </header>
 
         <main>
-          {/* Something something add something here */}
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about-me"element={<About />}/>
+          </Routes>
         </main>
-
-        <footer>
-          <MyFooter />
-        </footer>
       </div>
+      <footer>
+        <MyFooter />
+      </footer>
     </Router>
   );
 }
