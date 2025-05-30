@@ -32,15 +32,15 @@ const HeaderNav = () => {
   };
   
   return (
-    <nav className="navbar">
-      <div className="navbar-theme">
+    <nav className="hnav">
+      <div className="hnav-theme">
         <a href="/" className="text-underline">home</a>
         <a href="/works" className="text-underline">#my-works</a>
         <a href="/about-me" className="text-underline">about-me</a>
         <a href="/contact" className="text-underline">#contact-me</a>
 
         {/* Theme Toggle Button */}
-        <button onClick={toggleTheme} className="navbar-theme-toggle">
+        <button onClick={toggleTheme} className="hnav-theme-toggle">
           {isDark ? 'Light' : 'Dark'}
         </button>
       </div>

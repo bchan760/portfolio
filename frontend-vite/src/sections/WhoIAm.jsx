@@ -7,7 +7,7 @@ const WhoIAm = () => {
     <section id="who-i-am" className="whoiam-background">
       <div className="whoiam-title-position">
         <h1 className="whoiam-title-text">
-          Hello, I'm <span className="text-blue-600">Bill Chan</span>
+          Hi, I'm <span className="text-blue-600">Bill Chan</span>
         </h1>
         <p className="whoiam-text-color">
             Full Stack Dev & Problem Solver

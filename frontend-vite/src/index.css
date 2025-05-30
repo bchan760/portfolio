@@ -86,19 +86,36 @@
   .footer-spacing {
     @apply flex gap-4 items-center;
   }
-
-  .navbar {
+  /* Header Navbar */
+  .hnav {
     @apply bg-gray-100 dark:bg-[#2A3132] p-4;
   }
 
-  .navbar-theme {
+  .hnav-theme {
     @apply flex justify-end items-center space-x-4 text-gray-800 dark:text-white;
   }
 
-  .navbar-theme-toggle {
+  .hnav-theme-toggle {
     @apply border px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition;
   }
+  /* Vertical Navbar */
+  .vnav-position {
+    @apply fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block;
+  }
 
+  .vnav-col {
+    @apply flex flex-col items-center space-y-4;
+  }
+
+  .vnav-icons {
+    @apply w-4 h-4 rounded-full border-2 transition-all duration-300;
+  }
+
+  .vnav-icons-tooltip{
+    @apply absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap;
+  }
+
+  /* Card Component */
   .card-bg {
     @apply bg-[#1E1E1E] rounded-xl p-4 shadow-md;
   }
