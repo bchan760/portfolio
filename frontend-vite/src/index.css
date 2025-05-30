@@ -19,6 +19,10 @@
   .my-purple {
     @apply text-[#C778DD];
   }
+
+  .whoiam-text-color{
+    @apply text-xl md:text-2xl text-gray-600 mb-8;
+  }
 }
 
 @layer utilities {
@@ -47,6 +51,18 @@
 
   .about-centering {
     @apply p-8 max-w-4xl mx-auto;
+  }
+  
+  .whoiam-title-text {
+    @apply text-5xl md:text-7xl font-bold text-gray-900 mb-6;
+  }
+
+  .button-hover{
+    @apply bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors;
+  }
+
+  .button-hover-secondary {
+    @apply border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors;
   }
 }
 
@@ -89,5 +105,13 @@
 
   .card-title {
     @apply text-xl font-semibold text-[#C778DD] mb-2;
+  }
+
+  .whoiam-background {
+    @apply min-h-screen flex items-center;
+  }
+
+  .whoiam-title-position {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center;
   }
 }

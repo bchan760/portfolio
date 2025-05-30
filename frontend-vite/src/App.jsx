@@ -15,7 +15,6 @@ function App() {
 
       <div className='dark:text-white'>
         <main>
-          {/* <Landing /> */}
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/contact" element={<Contact />} />
