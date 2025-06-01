@@ -1,12 +1,28 @@
-const Card = ({ title, skills }) => {
+const Card = ({ 
+  id, 
+  title, 
+  description, 
+  technologies = [], 
+  icon, 
+  iconSize = 48,
+  onLearnMore 
+}) => {
+  const IconComponent = icon;
+  
   return (
-    <div className="card-bg">
+    <div key={id} className="card-container">
       <h3 className="card-title">{title}</h3>
-      <ul className="list-disc list-inside text-white">
-        {skills.map((skill, index) => (
-          <li key={index} className="text-sm">{skill}</li>
+      <p className="card-subtitle">{description}</p>
+      <div className="card-tech-container">
+        {technologies.map((t) => (
+          <span key={t} className="card-tech-tags">
+            {t}
+          </span>
         ))}
-      </ul>
+      </div>
+      <button className="card-learnmore" onClick={() => onLearnMore && onLearnMore(id)}>
+        Learn More <span className="card-arrow">→</span>
+      </button>
     </div>
   );
 };

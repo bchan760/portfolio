@@ -3,6 +3,7 @@ import { User, Code, Award, Info, Mail } from 'lucide-react';
 import VerticalNav from '../components/VerticalNav';
 import BacktoTop from '../components/BacktoTop';
 import WhoIAm from '../sections/WhoIAm';
+import MyProjects from '../sections/MyProjects';
 
 const Landing = () => {
   const [activeSection, setActiveSection] = useState('who-i-am');
@@ -40,11 +41,11 @@ const Landing = () => {
   return (
     <div className="relative">
       <VerticalNav activeSection={activeSection} sections={sections} />
-      {/* <BacktoTop /> */}
+      <BacktoTop />
       
       <WhoIAm />
-      {/* <ProjectsSection />
-      <SkillsSection />
+      <MyProjects />
+      {/* <SkillsSection />
       <AboutMeSection />
       <ContactSection /> */}
     </div>

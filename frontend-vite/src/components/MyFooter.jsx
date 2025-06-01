@@ -9,23 +9,17 @@ const MyFooter = () => {
         <div className="footer-divider"></div>
         
         <div className="footer-section">
-          {/* Contact Info (left)*/}
           <div className="footer-spacing">
             <span className="font-semibold">Bill</span>
             <span className="text-underline">Contact me: bchan36@calpoly.edu</span>
           </div>
-
-          {/* Social Media text(right)*/}
           <div className="footer-spacing">
             <span>Social Media</span>
           </div>
         </div>
 
         <div className="footer-section">
-          {/* Web Developer Title (left) */}
           <div>Web Designer and Full Stack Developer</div>
-
-          {/* Social Media icons (right) */}
           <div className="footer-icons">
             <a href="https://github.com/bchan760" target="_blank" rel="noopener noreferrer">
               <img src={githubIcon} alt="GitHub" className="h-6" />

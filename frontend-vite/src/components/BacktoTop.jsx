@@ -8,7 +8,7 @@ const BacktoTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-40 right-8 z-40 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+      className="backtotop-button"
     >
       <ChevronUp size={24} />
     </button>
