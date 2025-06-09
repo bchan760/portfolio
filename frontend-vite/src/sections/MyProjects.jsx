@@ -1,5 +1,5 @@
 import { Code } from 'lucide-react';
-import Card from '../components/Card';
+import ProjectCard from '../components/ProjectCard';
 
 const MyProjects = () => {
   const projects = [
@@ -9,6 +9,18 @@ const MyProjects = () => {
       description: "Webapp to find new songs to add to your playlist.",
       technologies: ["Lit", "Express.js", "PostgreSQL", "Microsoft Azure"]
     },
+    {
+      id: 2,
+      title: "ClAI",
+      description: "AI program that reads your resume to automatically create a cover letter.",
+      technologies: ["Python", "Flask", "OpenAI API"]
+    },
+    {
+      id: 3,
+      title: "todoList",
+      description: "React webapp to organize and coordinate your tasks.",
+      technologies: ["React.js", "Express.js", "Microsoft Azure"]
+    }
   ];
 
   const handleLearnMore = (projectId) => {
@@ -27,7 +39,7 @@ const MyProjects = () => {
         {/* Grid of project cards, add images later for each project*/}
         <div className="myprojects-grid">
           {projects.map((project) => (
-            <Card
+            <ProjectCard
               key={project.id}
               id={project.id}
               title={project.title}

@@ -1,30 +1,15 @@
-const Card = ({ 
-  id, 
-  title, 
-  description, 
-  technologies = [], 
-  icon, 
-  iconSize = 48,
-  onLearnMore 
-}) => {
-  const IconComponent = icon;
-  
+import React from "react";
+
+const Card = ({ title, skills }) => {
   return (
-    <div key={id} className="card-container">
+    <div className="card-bg">
       <h3 className="card-title">{title}</h3>
-      <p className="card-subtitle">{description}</p>
-      <div className="card-tech-container">
-        {technologies.map((t) => (
-          <span key={t} className="card-tech-tags">
-            {t}
-          </span>
+      <ul className="list-disc list-inside text-white">
+        {skills.map((skill, index) => (
+          <li key={index} className="text-sm">{skill}</li>
         ))}
-      </div>
-      <button className="card-learnmore" onClick={() => onLearnMore && onLearnMore(id)}>
-        Learn More <span className="card-arrow">→</span>
-      </button>
+      </ul>
     </div>
   );
 };
-
 export default Card;

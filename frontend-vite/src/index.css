@@ -16,9 +16,9 @@
     @apply mb-12;
   }
 
-  .my-purple {
+  /* .my-purple {
     @apply text-[#C778DD];
-  }
+  } */
 
   .whoiam-text-color{
     @apply text-xl md:text-2xl text-gray-600 mb-8;
@@ -38,7 +38,7 @@
     @apply text-4xl font-bold mb-4;
   }
   .h2-text-size { 
-    @apply text-2xl font-semibold mb-2;
+    @apply text-2xl font-semibold mb-2 text-[#C778DD];
   }
 
   .text-underline{
