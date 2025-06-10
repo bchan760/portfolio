@@ -4,6 +4,7 @@ import VerticalNav from '../components/VerticalNav';
 import BacktoTop from '../components/BacktoTop';
 import WhoIAm from '../sections/WhoIAm';
 import MyProjects from '../sections/MyProjects';
+import Skills from '../sections/Skills';
 
 const Landing = () => {
   const [activeSection, setActiveSection] = useState('who-i-am');
@@ -45,8 +46,8 @@ const Landing = () => {
       
       <WhoIAm />
       <MyProjects />
-      {/* <SkillsSection />
-      <AboutMeSection />
+      <Skills />
+      {/* <AboutMeSection />
       <ContactSection /> */}
     </div>
   );
