@@ -1,15 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 
-const WhoIAm = () => {
+const Intro = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="who-i-am" className="whoiam-background">
-      <div className="whoiam-title-position">
-        <h1 className="whoiam-title-text">
+    <section id="intro" className="intro-background">
+      <div className="intro-title-position">
+        <h1 className="intro-title-text">
           Hi, I'm <span className="text-blue-600">Bill Chan</span>
         </h1>
-        <p className="whoiam-text-color">
+        <p className="intro-text-color">
             Full Stack Dev & Problem Solver
         </p>
         <div className="space-x-4">
@@ -24,11 +24,11 @@ const WhoIAm = () => {
             className="button-hover-secondary"
           >
             Get In Touch
-          </button>
+          </button> 
         </div>
       </div>
     </section>
   );
 };
 
-export default WhoIAm;
+export default Intro;

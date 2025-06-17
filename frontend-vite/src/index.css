@@ -20,7 +20,7 @@
     @apply text-[#C778DD];
   } */
 
-  .whoiam-text-color{
+  .intro-text-color{
     @apply text-xl md:text-2xl text-gray-600 mb-8;
   }
 }
@@ -53,7 +53,7 @@
     @apply p-8 max-w-4xl mx-auto;
   }
   
-  .whoiam-title-text {
+  .intro-title-text {
     @apply text-5xl md:text-7xl font-bold text-gray-900 mb-6;
   }
 
@@ -152,11 +152,11 @@
     @apply fixed bottom-32 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 z-50;
   }
   /* Sections */
-  .whoiam-background {
+  .intro-background {
     @apply min-h-screen flex items-center;
   }
 
-  .whoiam-title-position {
+  .intro-title-position {
     @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center;
   }
 
