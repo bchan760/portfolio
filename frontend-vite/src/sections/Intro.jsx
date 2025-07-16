@@ -10,7 +10,7 @@ const Intro = () => {
           Hi, I'm <span className="text-blue-600">Bill Chan</span>
         </h1>
         <p className="intro-text-color">
-            Full Stack Dev & Problem Solver
+            Full Stack Developer & Problem Solver
         </p>
         <div className="space-x-4">
           <button 

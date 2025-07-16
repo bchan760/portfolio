@@ -15,8 +15,8 @@ const Landing = () => {
     { id: 'intro', title: 'Introduction', icon: User },
     { id: 'projects', title: 'Projects', icon: Code },
     { id: 'skills', title: 'Skills', icon: Award },
-    { id: 'about-me-section', title: 'About Me', icon: Info, route: '/about-me' },
-    { id: 'contact-section', title: 'Contact', icon: Mail, route: '/contact' }
+    { id: 'about-me', title: 'About Me', icon: Info },
+    { id: 'contact', title: 'Contact', icon: Mail },
   ];
 
   useEffect(() => {
@@ -48,6 +48,7 @@ const Landing = () => {
       
       <Intro />
       <MyProjects />
+      {/* <AboutMe /> */}
       <Skills />
       <AboutMe />
       <ContactMe />

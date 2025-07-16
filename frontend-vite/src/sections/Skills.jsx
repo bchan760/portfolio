@@ -11,7 +11,8 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center bg-gray-50">
+    <section id="skills" className="min-h-screen flex items-center justify-center bg-gray-50"
+    style={{backgroundColor: 'blue', minHeight: '50vh'}}>
         <div className="text-center">
             <Award size={60} className="mx-auto mb-6 text-blue-600" />
             <h2 className="text-4xl font-bold text-gray-900">My Skills</h2>

@@ -1,6 +1,6 @@
 const ContactMe = () => {
   return (
-    <section className="contact-me">
+    <section className="contact-me" style={{backgroundColor: 'green', minHeight: '100vh'}}>
       <h2>Contact Me</h2>
       <p>If you have any questions or just want to say hello, feel free to reach out!</p>
       <form>
