@@ -7,9 +7,11 @@ import MyProjects from '../sections/MyProjects';
 import Skills from '../sections/Skills';
 import AboutMe from '../sections/AboutMe';
 import ContactMe from '../sections/ContactMe';
+import MyFooter from '../components/MyFooter';
 
 const Landing = () => {
   const [activeSection, setActiveSection] = useState('who-i-am');
+  const [isAtBottom, setIsAtBottom] = useState(false);
 
   const sections = [
     { id: 'intro', title: 'Introduction', icon: User },
@@ -23,6 +25,12 @@ const Landing = () => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100;
       
+      const winHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const isNearBottom = winHeight + scrollTop >= docHeight - 100;
+      setIsAtBottom(isNearBottom);
+
       for (const section of sections) {
         if (!section.route) {
           const element = document.getElementById(section.id);
@@ -52,6 +60,7 @@ const Landing = () => {
       <Skills />
       <AboutMe />
       <ContactMe />
+      <MyFooter isAtBottom={isAtBottom}/>
     </div>
   );
 };

@@ -7,60 +7,62 @@
     font-size: 16px;
     scroll-behavior: smooth;
   }
-
+  
+  /* Global text color - this will apply to all text */
+  body {
+    @apply text-gray-900 dark:text-white;
+  }
+  
   .dark-bg-color {
     @apply bg-[#2A3132];
   }
-
+  
   .sect-spacing {
     @apply mb-12;
   }
-
-  /* .my-purple {
-    @apply text-[#C778DD];
-  } */
-
-  .intro-text-color{
-    @apply text-xl md:text-2xl text-gray-600 mb-8;
+  
+  .intro-text-color {
+    @apply text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8;
   }
 }
 
 @layer utilities {
   .base-text {
-    @apply text-white dark:text-black;
+    @apply text-gray-900 dark:text-black;
   }
-
+  
   .page-title-size {
     @apply text-4xl font-bold mb-4;
   }
-
+  
   .h1-text-size {
     @apply text-4xl font-bold mb-4;
   }
-  .h2-text-size { 
+  
+  .h2-text-size {
     @apply text-2xl font-semibold mb-2 text-[#C778DD];
   }
-
-  .text-underline{
+  
+  .text-underline {
     @apply hover:underline;
   }
-
+  
   .in-line-row {
     @apply flex flex-wrap gap-6;
   }
-
+  
   .about-centering {
     @apply p-8 max-w-4xl mx-auto;
   }
   
   .intro-title-text {
-    @apply text-5xl md:text-7xl font-bold text-gray-900 mb-6;
+    @apply text-5xl text-blue-600 md:text-7xl font-bold mb-6;
   }
-
-  .button-hover{
+  
+  .button-hover {
     @apply bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors;
   }
-
+  
   .button-hover-secondary {
     @apply border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors;
   }
@@ -70,115 +72,119 @@
   .footer {
     @apply fixed bottom-0 left-0 right-0 p-4 text-center text-gray-800 dark:text-white dark:bg-[#2A3132];
   }
-
+  
   .footer-divider {
     @apply fixed bottom-full left-0 right-0 border-t border-[#98A2B3] mt-8;
   }
-
+  
   .footer-icons {
     @apply flex gap-4;
   }
-
+  
   .footer-section {
     @apply flex justify-between items-center flex-wrap gap-4;
   }
-
+  
   .footer-spacing {
     @apply flex gap-4 items-center;
   }
+  
   /* Header Navbar */
   .hnav {
     @apply bg-gray-100 dark:bg-[#2A3132] p-4;
   }
-
+  
   .hnav-theme {
     @apply flex justify-end items-center space-x-4 text-gray-800 dark:text-white;
   }
-
+  
   .hnav-theme-toggle {
     @apply border px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition;
   }
+  
   /* Vertical Navbar */
   .vnav-position {
     @apply fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block;
   }
-
+  
   .vnav-col {
     @apply flex flex-col items-center space-y-4;
   }
-
+  
   .vnav-icons {
     @apply w-4 h-4 rounded-full border-2 transition-all duration-300;
   }
-
-  .vnav-icons-tooltip{
+  
+  .vnav-icons-tooltip {
     @apply absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap;
   }
-
+  
   /* Card Component */
   .card-container {
-    @apply bg-gray-50 rounded-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2;
+    @apply bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2;
   }
-
+  
   .card-bg {
     @apply bg-[#1E1E1E] rounded-xl p-4 shadow-md;
   }
-
+  
   .card-title {
     @apply text-xl font-bold text-[#C778DD] mb-2;
   }
-
+  
   .card-subtitle {
-    @apply text-gray-600 mb-4;
+    @apply text-gray-600 dark:text-gray-300 mb-4;
   }
-
+  
   .card-tech-container {
     @apply flex flex-wrap gap-2 mb-4;
   }
-
+  
   .card-tech-tags {
     @apply bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-xl;
   }
-
-  .card-learnmore{
+  
+  .card-learnmore {
     @apply text-blue-600 hover:text-blue-700 hover:underline font-medium;
   }
-
+  
   .card-arrow {
     @apply text-blue-600 hover:text-blue-700 transition-transform duration-300;
   }
-  /**/
+  
   .backtotop-button {
     @apply fixed bottom-32 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 z-50;
   }
+  
   /* Sections */
   .intro-background {
     @apply min-h-screen flex items-center;
   }
-
+  
   .intro-title-position {
     @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center;
   }
-
+  
   .myprojects-bg {
-    @apply min-h-screen flex items-center justify-center bg-white;
+    @apply min-h-screen flex items-center justify-center bg-white dark:bg-gray-400;
   }
-
+  
   .myprojects-header {
     @apply text-center mb-16;
   }
-
-  .myprojects-content-wrapper{
+  
+  .myprojects-content-wrapper {
     @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+  
   .myprojects-title {
-    @apply text-4xl md:text-5xl font-bold text-gray-900 mb-4;
+    @apply text-4xl md:text-5xl font-bold mb-4;
   }
-
+  
   .myprojects-subtitle {
-    @apply text-lg md:text-xl text-gray-600 mb-8;
+    @apply text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8;
   }
-
+  
   .myprojects-grid {
     @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-8;
   }

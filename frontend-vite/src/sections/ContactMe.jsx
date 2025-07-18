@@ -1,9 +1,9 @@
 const ContactMe = () => {
   return (
-    <section className="contact-me" style={{backgroundColor: 'green', minHeight: '100vh'}}>
-      <h2>Contact Me</h2>
-      <p>If you have any questions or just want to say hello, feel free to reach out!</p>
-      <form>
+    <section className="contact-me">
+      <h2 className="base-text">Contact Me</h2>
+      <p className="base-text">If you have any questions or just want to say hello, feel free to reach out!</p>
+      <form className="base-text">
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" required />
@@ -16,7 +16,7 @@ const ContactMe = () => {
           <label htmlFor="message">Message:</label>
           <textarea id="message" name="message" required></textarea>
         </div>
-        <button type="submit">Send</button>
+        <button type="submit" className="base-text">Send</button>
       </form>
     </section>
   );

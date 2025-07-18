@@ -6,8 +6,16 @@ const Intro = () => {
   return (
     <section id="intro" className="intro-background">
       <div className="intro-title-position">
+        <div className="mb-6">
+          <img 
+            src="" 
+            alt="Bill's profile picture"
+            className="w-48 h-48 rounded-full border-4 border-blue-600 mx-auto object-cover"
+          />
+        </div>
+
         <h1 className="intro-title-text">
-          Hi, I'm <span className="text-blue-600">Bill Chan</span>
+          Hi, I'm Bill
         </h1>
         <p className="intro-text-color">
             Full Stack Developer & Problem Solver

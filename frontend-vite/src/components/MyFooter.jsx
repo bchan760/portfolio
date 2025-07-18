@@ -1,10 +1,13 @@
+
 import githubIcon from '../assets/github.png';
 import linkedinIcon from '../assets/linkedin.png';
 
-const MyFooter = () => {
+const MyFooter = ({ isAtBottom }) => {
   return (
     <>
-      <footer className="footer">
+      <footer className={`footer transition-opacity duration-300 
+        ${isAtBottom ? 'opacity-100' : 'opacity-0 pointer-events-none'}`
+      }>
         {/* Divider Line */}
         <div className="footer-divider"></div>
         
