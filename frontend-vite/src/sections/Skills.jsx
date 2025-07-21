@@ -11,11 +11,11 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center bg-gray-50">
+    <section id="skills" className="min-h-screen flex items-center justify-center">
         <div className="text-center">
             <Award size={60} className="mx-auto mb-6 text-blue-600" />
-            <h2 className="text-4xl font-bold text-gray-900">My Skills</h2>
-            <p className="text-xl text-gray-600">Technologies and tools I work with</p>
+            <h2 className="h1-text-size">My Skills</h2>
+            <p className="h2-text-size">Technologies and tools I work with</p>
         </div>
     </section>
   );

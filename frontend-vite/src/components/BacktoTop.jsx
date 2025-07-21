@@ -6,10 +6,7 @@ const BacktoTop = () => {
   };
 
   return (
-    <button
-      onClick={scrollToTop}
-      className="backtotop-button"
-    >
+    <button onClick={scrollToTop} className="backtotop-button">
       <ChevronUp size={24} />
     </button>
   );

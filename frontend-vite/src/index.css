@@ -8,9 +8,8 @@
     scroll-behavior: smooth;
   }
   
-  /* Global text color - this will apply to all text */
   body {
-    @apply text-gray-900 dark:text-white;
+    @apply dark:text-white bg-[#2A3132] min-h-screen;
   }
   
   .dark-bg-color {
@@ -166,7 +165,7 @@
   }
   
   .myprojects-bg {
-    @apply min-h-screen flex items-center justify-center bg-white dark:bg-gray-400;
+    @apply min-h-screen flex items-center justify-center;
   }
   
   .myprojects-header {

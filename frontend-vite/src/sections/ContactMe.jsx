@@ -1,7 +1,7 @@
 const ContactMe = () => {
   return (
     <section className="contact-me">
-      <h2 className="base-text">Contact Me</h2>
+      <h2 className="h1-text-size">Contact Me</h2>
       <p className="base-text">If you have any questions or just want to say hello, feel free to reach out!</p>
       <form className="base-text">
         <div>

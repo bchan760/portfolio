@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { User, Code, Award, Info, Mail } from 'lucide-react';
 import VerticalNav from '../components/VerticalNav';
 import BacktoTop from '../components/BacktoTop';
+import MyFooter from '../components/MyFooter';
 import Intro from '../sections/Intro';
 import MyProjects from '../sections/MyProjects';
 import Skills from '../sections/Skills';
 import AboutMe from '../sections/AboutMe';
 import ContactMe from '../sections/ContactMe';
-import MyFooter from '../components/MyFooter';
 
 const Landing = () => {
   const [activeSection, setActiveSection] = useState('who-i-am');
@@ -56,7 +56,6 @@ const Landing = () => {
       
       <Intro />
       <MyProjects />
-      {/* <AboutMe /> */}
       <Skills />
       <AboutMe />
       <ContactMe />

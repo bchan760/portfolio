@@ -8,7 +8,7 @@ const ABOUT_CONTENT = {
 
 const AboutMe = () => {
   return (
-    <section id="about-me" className="about-me base-text">
+    <section id="about-me" className="h1-text-size">
       <h2>{ABOUT_CONTENT.title}</h2>
       {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
         <p key={index}>{paragraph}</p>
