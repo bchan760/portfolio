@@ -69,11 +69,11 @@
 
 @layer components {
   .footer {
-    @apply fixed bottom-0 left-0 right-0 p-4 text-center text-gray-800 dark:text-white dark:bg-[#2A3132];
+    @apply bottom-0 left-0 right-0 py-4 text-center dark:text-white;
   }
   
   .footer-divider {
-    @apply fixed bottom-full left-0 right-0 border-t border-[#98A2B3] mt-8;
+    @apply w-full border-t border-white mb-4;
   }
   
   .footer-icons {
@@ -85,7 +85,7 @@
   }
   
   .footer-spacing {
-    @apply flex gap-4 items-center;
+    @apply flex gap-6 items-center;
   }
   
   /* Header Navbar */
