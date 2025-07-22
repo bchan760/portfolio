@@ -34,7 +34,7 @@ const MyFooter = ({ isAtBottom }) => {
           </div>
 
           {/* Footer Copyright Text */}
-          <p className="text-sm text-center mt-18 mb-2">&copy; {new Date().getFullYear()}. Made by Bill Chan</p>
+          <p className="text-sm text-center mt-18 mb-2">&copy; {new Date().getFullYear()}. Made by Bill</p>
         </div>
       </footer>
   );
