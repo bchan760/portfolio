@@ -9,6 +9,10 @@ const ABOUT_CONTENT = {
 };
 
 const AboutMe = () => {
+  const handleReadMore = () => {
+    // Placeholder, will add logic to redirect to different page or show more content
+    console.log("Read More clicked");
+  };
   return (
     <section id="about-me" className="h1-text-size">
       <h2 className="text-center mb-8">{ABOUT_CONTENT.title}</h2>
@@ -19,6 +23,12 @@ const AboutMe = () => {
           {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
             <p className="h2-text-size mb-4" key={index}>{paragraph}</p>
           ))}
+
+          <button 
+            onClick={handleReadMore}
+            className="mt-4 px-6 py-2 bg-[#C778DD] text-white rounded hover:bg-[#A45DBB]">
+            Learn More
+          </button>
         </div>
 
         {/* Right side image */}
