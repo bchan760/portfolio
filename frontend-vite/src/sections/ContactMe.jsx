@@ -1,6 +1,6 @@
 const ContactMe = () => {
   return (
-    <section className="contact-me">
+    <section className="min-h-screen flex flex-col items-center justify-center">
       <h2 className="h1-text-size">Contact Me</h2>
       <p className="h2-text-size">If you have any questions or just want to say hello, feel free to reach out!</p>
       <form className="base-text">

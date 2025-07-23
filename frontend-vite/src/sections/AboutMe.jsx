@@ -14,20 +14,21 @@ const AboutMe = () => {
     console.log("Read More clicked");
   };
   return (
-    <section id="about-me" className="h1-text-size">
+    <section id="about-me" className="h1-text-size min-h-screen">
       <h2 className="text-center mb-8">{ABOUT_CONTENT.title}</h2>
 
       <div className="flex flex-col md:flex-row items-center gap-8 mt-4">
         {/* Left side text*/}
-        <div className="flex-1 md:w-1/2 md:text-left justify-center px-14 py-6">
+        <div className="flex-1 md:w-1/2 md:text-left justify-center px-20 py-6">
           {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
             <p className="h2-text-size mb-4" key={index}>{paragraph}</p>
           ))}
 
           <button 
             onClick={handleReadMore}
-            className="mt-4 px-6 py-2 bg-[#C778DD] text-white rounded hover:bg-[#A45DBB]">
-            Learn More
+            className="mt-4 px-4 py-4 bg-transparent border-2 border-[#C778DD] text-white hover:bg-[#C778DD] transition-colors duration-300">
+            Read More
+            <span className="transition-transform duration-300 group-hover:translate-x-10">→</span>
           </button>
         </div>
 
