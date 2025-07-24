@@ -11,7 +11,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center">
+    <section id="skills" className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center">
             <Award size={60} className="mx-auto mb-6 text-blue-600" />
             <h2 className="h1-text-size">My Skills</h2>

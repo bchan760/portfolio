@@ -4,7 +4,7 @@ const Intro = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="intro" className="intro-background">
+    <section id="intro" className="intro-bg">
       <div className="intro-title-position">
         <div className="mb-6">
           <img 
