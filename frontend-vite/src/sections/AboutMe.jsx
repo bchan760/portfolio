@@ -14,12 +14,12 @@ const AboutMe = () => {
     console.log("Read More clicked");
   };
   return (
-    <section id="about-me" className="h1-text-size min-h-screen">
+    <section id="about-me" className="h1-text-size min-h-[60vh]">
       <h2 className="text-center mb-8">{ABOUT_CONTENT.title}</h2>
 
       <div className="flex flex-col md:flex-row items-center gap-8 mt-4">
         {/* Left side text*/}
-        <div className="flex-1 md:w-1/2 md:text-left justify-center px-20 py-6">
+        <div className="flex-1 md:w-1/2 md:text-left justify-center px-20 md:px-12 lg:px-16 py-6 md:ml-16 lg:ml-24">
           {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
             <p className="h2-text-size mb-4" key={index}>{paragraph}</p>
           ))}
