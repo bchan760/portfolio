@@ -20,6 +20,18 @@ const MyProjects = () => {
       title: "todoList",
       description: "React webapp to organize and coordinate your tasks.",
       technologies: ["React.js", "Express.js", "Microsoft Azure"]
+    },
+    {
+      id: 4,
+      title: "My Research Paper",
+      description: "A comprehensive study on providing equitable opportunities with Machine Learning.",
+      technologies: ["Scikit-learn", "Python", "Pandas", "Matplotlib"]
+    },
+    {
+      id: 5,
+      title: "Portfolio",
+      description: "You're looking at it right now!",
+      technologies: ["React.js", "Vite", "Tailwind CSS"]
     }
   ];
 

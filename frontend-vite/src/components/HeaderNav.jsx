@@ -44,6 +44,7 @@ const HeaderNav = () => {
           {isDark ? 'Light' : 'Dark'}
         </button>
       </div>
+      <div className='divider mt-2'></div>
     </nav>
   );
 };

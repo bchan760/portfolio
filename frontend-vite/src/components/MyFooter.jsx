@@ -8,7 +8,7 @@ const MyFooter = ({ isAtBottom }) => {
         ${isAtBottom ? 'opacity-100' : 'opacity-0 pointer-events-none'}`
       }>
         {/* Divider Line */}
-        <div className="footer-divider"></div>
+        <div className="divider"></div>
         
         <div className='px-8'>
           <div className="footer-section">

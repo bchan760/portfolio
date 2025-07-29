@@ -8,8 +8,7 @@ const Intro = () => {
       <div className="intro-title-position">
         <div className="mb-6">
           <img 
-            src="" 
-            alt="Bill's profile picture"
+            src={null} 
             className="w-48 h-48 rounded-full border-4 border-blue-600 mx-auto object-cover"
           />
         </div>

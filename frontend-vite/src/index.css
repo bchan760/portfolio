@@ -72,7 +72,7 @@
     @apply bottom-0 left-0 right-0 py-4 text-center dark:text-white;
   }
   
-  .footer-divider {
+  .divider {
     @apply w-full border-t border-white mb-4;
   }
   
@@ -115,12 +115,14 @@
   }
   
   .vnav-icons-tooltip {
-    @apply absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap;
+    @apply absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-900 
+    text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap;
   }
   
   /* Card Component */
   .card-container {
-    @apply bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2;
+    @apply bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:shadow-xl 
+    transition-all duration-300 hover:-translate-y-2 min-w-[50px] min-h-[300px];
   }
   
   .card-bg {
@@ -173,7 +175,7 @@
   }
   
   .myprojects-content-wrapper {
-    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply mx-auto px-8 md:px-16 lg:px-24 xl:px-32;
   }
   
   .myprojects-title {
@@ -185,6 +187,6 @@
   }
   
   .myprojects-grid {
-    @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-8;
+    @apply grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-12;
   }
 }
