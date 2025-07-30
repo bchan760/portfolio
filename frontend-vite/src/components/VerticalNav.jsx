@@ -1,7 +1,9 @@
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const VerticalNav = ({ activeSection, sections }) => {
   const navigate = useNavigate();
+  const [opacity, setOpacity] = state(0);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
