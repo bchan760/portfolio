@@ -20,7 +20,13 @@ const VerticalNav = ({ activeSection, sections }) => {
     }
   };
 
-  if (activeSection === 'intro') {
+  useEffect(() => {
+    const handleScroll = () => {
+      
+    }
+  });
+
+  if (opacity === 0) {
     return null;
   } 
 
