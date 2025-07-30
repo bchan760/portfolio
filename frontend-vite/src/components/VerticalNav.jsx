@@ -18,6 +18,10 @@ const VerticalNav = ({ activeSection, sections }) => {
     }
   };
 
+  if (activeSection === 'intro') {
+    return null;
+  } 
+
   return (
     <div className="vnav-position">
       <div className="vnav-col">
