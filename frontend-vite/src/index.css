@@ -55,15 +55,15 @@
   }
   
   .intro-title-text {
-    @apply text-5xl text-blue-600 md:text-7xl font-bold mb-6;
+    @apply text-5xl text-[#C778DD] md:text-7xl font-bold mb-6;
   }
   
   .button-hover {
-    @apply bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors;
+    @apply bg-[#C778DD] text-white px-8 py-3 rounded-lg hover:bg-[#774884] transition-colors;
   }
   
   .button-hover-secondary {
-    @apply border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors;
+    @apply border-2 border-[#C778DD] text-[#C778DD] px-8 py-3 rounded-lg hover:bg-[#C778DD] hover:text-white transition-colors;
   }
 }
 
@@ -154,7 +154,7 @@
   }
   
   .backtotop-button {
-    @apply fixed bottom-32 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 z-50;
+    @apply fixed bottom-32 right-8 bg-[#C778DD] text-white p-3 rounded-full shadow-lg hover:bg-[#774884] z-50;
   }
   
   /* Sections */

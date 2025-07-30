@@ -9,7 +9,7 @@ const Intro = () => {
         <div className="mb-6">
           <img 
             src={null} 
-            className="w-48 h-48 rounded-full border-4 border-blue-600 mx-auto object-cover"
+            className="w-48 h-48 rounded-full border-4 border-[#C778DD] mx-auto object-cover"
           />
         </div>
 
