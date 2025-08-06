@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 
 const VerticalNav = ({ activeSection, sections }) => {
   const navigate = useNavigate();
-  const [opacity, setOpacity] = state(0);
+  const [opacity, setOpacity] = useState(0);
+  const [showTimer, setShowTimer] = useState(null);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -19,12 +20,51 @@ const VerticalNav = ({ activeSection, sections }) => {
       scrollToSection(section.id);
     }
   };
-
+  
+  {/* add logic to set vertical nav to fade when on intro section */}
   useEffect(() => {
     const handleScroll = () => {
-      
-    }
-  });
+      const isIntroSection = document.getElementById('intro');
+      if (isIntroSection) {
+        const introRec = isIntroSection.getBoundingClientRect();
+        const introHeight = isIntroSection.offsetHeight;
+        const scrollProgress = Math.max(0, -introRec.top  - introHeight);
+        
+        if (scrollProgress < 1){
+          if (showTimer) {
+            clearTimeout(showTimer);
+          }
+
+          setOpacity(1);
+          const timer = setTimeout(() => {
+            setOpacity(0);
+          }, 1500);
+
+          setShowTimer(timer);
+        } else {
+          {/* past Intro section, don't need timer*/}
+          if (showTimer) {
+            clearTimeout(showTimer);
+            setShowTimer(null);
+          }
+
+          const fadeStart = 0.8;
+          const fadeOpacity = Math.min(1, Math.max(0, (scrollProgress - fadeStart) / (1 - fadeStart)));
+          setOpacity(fadeOpacity);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      if(showTimer){
+        clearTimeout(showTimer);
+      }
+    };
+  }, [showTimer]);
 
   if (opacity === 0) {
     return null;
