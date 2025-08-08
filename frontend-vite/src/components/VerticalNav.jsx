@@ -21,27 +21,26 @@ const VerticalNav = ({ activeSection, sections }) => {
     }
   };
   
-  {/* added logic to set vertical nav to fade when on intro section */}
-  useEffect(() => 
-  {
+  // added logic to set vertical nav to fade when on intro section
+  useEffect(() => {
     const handleScroll = () => {
       const isIntroSection = document.getElementById('intro');
       if (isIntroSection) {
         const introRec = isIntroSection.getBoundingClientRect();
         const introHeight = isIntroSection.offsetHeight;
-        const scrollProgress = Math.max(0, -introRec.top  - introHeight);
+        const scrollProgress = Math.max(0, -introRec.top / introHeight);
         
-        if (scrollProgress < 1){
-          if (showTimer) {
-            clearTimeout(showTimer);
+        if (activeSection === 'intro'){
+          if (!showTimer) {
+            setOpacity(1);
+
+            const timer = setTimeout(() => {
+              setOpacity(0);
+              setShowTimer(null);
+            }, 3000);
+
+            setShowTimer(timer);
           }
-
-          setOpacity(1);
-          const timer = setTimeout(() => {
-            setOpacity(0);
-          }, 1500);
-
-          setShowTimer(timer);
         } else {
           {/* past Intro section, don't need timer*/}
           if (showTimer) {
@@ -60,7 +59,7 @@ const VerticalNav = ({ activeSection, sections }) => {
     handleScroll();
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', handleScroll);
       if(showTimer){
         clearTimeout(showTimer);
       }
@@ -69,10 +68,13 @@ const VerticalNav = ({ activeSection, sections }) => {
 
   if (opacity === 0) {
     return null;
-  } 
+  }
 
   return (
-    <div className="vnav-position">
+    <div 
+      className="vnav-position vnav-fade-transition"
+      style={{opacity}}
+    >
       <div className="vnav-col">
         {sections.map((section) => {
           const isActive = activeSection === section.id;
