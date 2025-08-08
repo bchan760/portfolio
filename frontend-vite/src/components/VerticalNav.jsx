@@ -21,8 +21,9 @@ const VerticalNav = ({ activeSection, sections }) => {
     }
   };
   
-  {/* add logic to set vertical nav to fade when on intro section */}
-  useEffect(() => {
+  {/* added logic to set vertical nav to fade when on intro section */}
+  useEffect(() => 
+  {
     const handleScroll = () => {
       const isIntroSection = document.getElementById('intro');
       if (isIntroSection) {
@@ -64,7 +65,7 @@ const VerticalNav = ({ activeSection, sections }) => {
         clearTimeout(showTimer);
       }
     };
-  }, [showTimer]);
+  }, []);
 
   if (opacity === 0) {
     return null;
