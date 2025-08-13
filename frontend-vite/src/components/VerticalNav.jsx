@@ -28,14 +28,14 @@ const VerticalNav = ({ activeSection, sections }) => {
       if (isIntroSection) {
         const introRec = isIntroSection.getBoundingClientRect();
         const introHeight = isIntroSection.offsetHeight;
-        const scrollProgress = Math.max(0, -introRec.top / introHeight);
+        const scrollProgress = Math.max(0, (-introRec.top / introHeight));
         
         if (activeSection === 'intro'){
           if (!showTimer) {
             setOpacity(1);
 
             const timer = setTimeout(() => {
-              setOpacity(0);
+              setOpacity(0.5);
               setShowTimer(null);
             }, 3000);
 
