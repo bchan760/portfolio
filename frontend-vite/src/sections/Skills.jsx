@@ -68,7 +68,7 @@ const Skills = () => {
     const colors = {
       'Frameworks/Libraries': 'text-blue-500',
       'Languages': 'text-green-500',
-      'Databases': 'text-yellow-500',
+      'Databases': 'text-red-500',
       'Tools': 'text-purple-500'
     };
     return colors[category] || 'text-gray-500';
