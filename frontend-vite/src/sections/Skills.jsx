@@ -64,6 +64,26 @@ const Skills = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const getCategoryColors = (category) => {
+    const colors = {
+      'Frameworks/Libraries': 'text-blue-500',
+      'Languages': 'text-green-500',
+      'Databases': 'text-yellow-500',
+      'Tools': 'text-purple-500'
+    };
+    return colors[category] || 'text-gray-500';
+  };
+
+  const getFontSize = (level) => {
+    return `${Math.max(12, level / 2)}px`;
+  };
+
+  const getHoverTransform = (word) => {
+    return isHovered 
+    ? 'scale(1.25) z-10 shadow-2xl' 
+    : 'scale(1)';
+  };
+
   return (
     <section id="skills" className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -75,6 +95,10 @@ const Skills = () => {
         <div
           ref={wordCloudRef}
           className="relative w-full h-48 mt-8"
+          style={{ 
+            minHeight: '300px', 
+            maxHeight: '500px' 
+          }}
         >
         {words.map((word, index) => {
           const position = wordPosition[index] || {x: 0, y: 0};
