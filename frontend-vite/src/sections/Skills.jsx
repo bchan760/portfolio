@@ -75,7 +75,10 @@ const Skills = () => {
   };
 
   const getFontSize = (level) => {
-    return `${Math.max(12, level / 2)}px`;
+    const minSize = 12;
+    const maxSize = 48;
+    const normalized = (level - 75) / (90 - 75);
+    return minSize + (maxSize - minSize) * Math.max(0, Math.min(1, normalized));
   };
 
   const getHoverTransform = (word) => {
@@ -106,10 +109,11 @@ const Skills = () => {
           return (
             <div
               key={word.name}
-              className="absolute text-lg font-bold cursor-pointer"
+              className={`absolute text-lg font-bold cursor-pointer ${getCategoryColors(word.category)}`}
               style={{
                 left: `${position.x}px`,
                 top: `${position.y}px`,
+                fontSize: `${getFontSize(word.level)}px`,
                 transform: 'translate(-50%, -50%)'
               }}
               onMouseEnter={() => setHoverWord(word.name)}
@@ -119,6 +123,26 @@ const Skills = () => {
             </div>
           );
         })}
+        </div>
+
+        {/* Legend for categories*/}
+        <div>
+          <div className="flex items-center">
+            <span className="inline-block w-4 h-4 mr-2 bg-blue-500"></span>
+            <span>Frameworks/Libraries</span>
+          </div>
+          <div className="flex items-center">
+            <span className="inline-block w-4 h-4 mr-2 bg-green-500"></span>
+            <span>Languages</span>
+          </div>
+          <div className="flex items-center">
+            <span className="inline-block w-4 h-4 mr-2 bg-red-500"></span>
+            <span>Databases</span>
+          </div>
+          <div className="flex items-center">
+            <span className="inline-block w-4 h-4 mr-2 bg-purple-500"></span>
+            <span>Tools</span>
+          </div>
         </div>
     </section>
   );
