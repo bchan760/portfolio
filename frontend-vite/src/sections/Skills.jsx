@@ -88,9 +88,8 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center">
-        <div className="section-intro">
-            <Award size={60} className="mx-auto mb-6 text-blue-600" />
+    <section id="skills" className="min-h-screen flex items-center justify-center relative">
+        <div className="absolute top-8 left-[10%] z-20">
             <h2 className="h1-text-size">My Skills</h2>
             <p className="h2-text-size">Technologies and tools I work with</p>
         </div>
@@ -115,6 +114,7 @@ const Skills = () => {
                 left: `${position.x}px`,
                 top: `${position.y}px`,
                 fontSize: `${getFontSize(word.level)}px`,
+                fontWeight: isHovered ? 'bold' : 'semibold',
                 transform: 'translate(-50%, -50%)'
               }}
               onMouseEnter={() => setHoveredWord(word.name)}
