@@ -2,7 +2,7 @@ import {useState, useRef, useEffect} from 'react';
 import { Award } from 'lucide-react';
 
 const Skills = () => {
-  const [hoverWord, setHoverWord] = useState(null);
+  const [hoveredWord, setHoveredWord] = useState(null);
   const wordCloudRef = useRef(null);
   const [wordPosition, setWordPosition] = useState([]);
 
@@ -81,7 +81,7 @@ const Skills = () => {
     return minSize + (maxSize - minSize) * Math.max(0, Math.min(1, normalized));
   };
 
-  const getHoverTransform = (word) => {
+  const getHoverTransform = (isHovered) => {
     return isHovered 
     ? 'scale(1.25) z-10 shadow-2xl' 
     : 'scale(1)';
@@ -89,7 +89,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
+        <div className="section-intro">
             <Award size={60} className="mx-auto mb-6 text-blue-600" />
             <h2 className="h1-text-size">My Skills</h2>
             <p className="h2-text-size">Technologies and tools I work with</p>
@@ -99,25 +99,26 @@ const Skills = () => {
           ref={wordCloudRef}
           className="relative w-full h-48 mt-8"
           style={{ 
-            minHeight: '300px', 
-            maxHeight: '500px' 
+            minHeight: '60vh', 
+            maxHeight: '80vh' 
           }}
         >
         {words.map((word, index) => {
           const position = wordPosition[index] || {x: 0, y: 0};
+          const isHovered = hoveredWord === word.name;
 
           return (
             <div
               key={word.name}
-              className={`absolute text-lg font-bold cursor-pointer ${getCategoryColors(word.category)}`}
+              className={`absolute text-lg font-bold cursor-pointer ${getHoverTransform(isHovered)} ${getCategoryColors(word.category)}`}
               style={{
                 left: `${position.x}px`,
                 top: `${position.y}px`,
                 fontSize: `${getFontSize(word.level)}px`,
                 transform: 'translate(-50%, -50%)'
               }}
-              onMouseEnter={() => setHoverWord(word.name)}
-              onMouseLeave={() => setHoverWord(null)}
+              onMouseEnter={() => setHoveredWord(word.name)}
+              onMouseLeave={() => setHoveredWord(null)}
             >
               {word.name}
             </div>
