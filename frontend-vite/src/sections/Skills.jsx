@@ -1,5 +1,4 @@
 import {useState, useRef, useEffect} from 'react';
-import { Award } from 'lucide-react';
 
 const Skills = () => {
   const [hoveredWord, setHoveredWord] = useState(null);

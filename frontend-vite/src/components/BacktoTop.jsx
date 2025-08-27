@@ -2,7 +2,7 @@ import { ChevronUp } from 'lucide-react';
 
 const BacktoTop = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
