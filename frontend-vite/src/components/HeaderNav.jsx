@@ -40,10 +40,6 @@ const HeaderNav = () => {
             #contact-me
         </a>
 
-        {/* Theme Toggle Button */}
-        {/* <button onClick={toggleTheme} className="hnav-theme-toggle">
-          {isDark ? 'Light' : 'Dark'}
-        </button> */}
       </div>
       <div className='divider mt-2'></div>
     </nav>
