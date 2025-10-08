@@ -8,27 +8,29 @@ const HeaderNav = () => {
     }
   };
 
-  const handleResumeClick = () => {
-    console.log('All env vars: ', import.meta.env);
-    const resumeURL = import.meta.env.VITE_RESUME_URL;
-    console.log('Resume URL:', resumeURL);
-    if (resumeURL) {
-      window.open(resumeURL, '_blank');
-    } else {
-      console.error("Resume failed to load!");
-    }
-  };
+  // const handleResumeClick = () => {
+  //   console.log('All env vars: ', import.meta.env);
+  //   const resumeURL = import.meta.env.VITE_RESUME_URL;
+  //   console.log('Resume URL:', resumeURL);
+  //   if (resumeURL) {
+  //     window.open(resumeURL, '_blank');
+  //   } else {
+  //     console.error("Resume failed to load!");
+  //   }
+  // };
   
   return (
     <nav className="hnav">
       <div className="hnav-theme">
         <a href="/" className="text-underline">home</a>
-        <button
-          onClick={handleResumeClick}
-          className='text-underline bg-transparent border-none cursor-pointer'
+        <a
+          href="/Bill_Chan_Resume.docx.pdf"
+          target="_blank" 
+          rel="noopener noreferrer"
+          className='text-underline'
         >
           #resume
-        </button>
+        </a>
         <a href="/works" className="text-underline">#my-works</a>
         <a href="/about-me" className="text-underline">#about-me</a>
         <a href="#contact" 
