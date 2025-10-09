@@ -19,16 +19,25 @@ const ContactMe = () => {
         </p>
       </div>
 
-      {isSubmitted ? (
+      <form>
         <div>
-          <p>Thanks for reaching out!</p>
-        </div>) : (
-          <div>
-            <div>Name</div>
-            <div>Email</div>
-            <div>Message</div>
-          </div>
-        )}
+          <label for="exampleFormControlInput1">Name</label>
+          <textarea></textarea>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Email</label>
+          <textarea></textarea>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Message</label>
+          <textarea
+           rows={3}>
+            
+           </textarea>
+        </div>
+        {/* <div class="form-group">
+        </div> */}
+      </form>
       
     </section>
   );

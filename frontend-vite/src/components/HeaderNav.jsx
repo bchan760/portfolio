@@ -7,17 +7,6 @@ const HeaderNav = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  // const handleResumeClick = () => {
-  //   console.log('All env vars: ', import.meta.env);
-  //   const resumeURL = import.meta.env.VITE_RESUME_URL;
-  //   console.log('Resume URL:', resumeURL);
-  //   if (resumeURL) {
-  //     window.open(resumeURL, '_blank');
-  //   } else {
-  //     console.error("Resume failed to load!");
-  //   }
-  // };
   
   return (
     <nav className="hnav">

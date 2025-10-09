@@ -22,10 +22,17 @@ const Contact = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input name="name" placeholder="Name" onChange={handleChange} required />
-      <input name="email" type="email" placeholder="Email" onChange={handleChange} required />
-      <textarea name="message" placeholder="Message" onChange={handleChange} required />
-      <button type="submit">Send</button>
+      <div>
+        <label for="exampleFormControlInput1">Name</label>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Email</label>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Message</label>
+      </div>
+      {/* <div class="form-group">
+      </div> */}
     </form>
   );
 };
