@@ -18,7 +18,7 @@ const Landing = () => {
     { id: 'projects', title: 'Projects', icon: Code },
     { id: 'skills', title: 'Skills', icon: Award },
     { id: 'about-me', title: 'About Me', icon: Info },
-    { id: 'contact-me', title: 'Contact', icon: Mail },
+    { id: 'contact-me', title: 'Contact Me', icon: Mail },
   ];
 
   useEffect(() => {

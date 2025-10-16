@@ -22,7 +22,7 @@ const HeaderNav = () => {
         </a>
         <a href="/works" className="text-underline">#my-works</a>
         <a href="/about-me" className="text-underline">#about-me</a>
-        <a href="#contact" 
+        <a href="#contact-me" 
           onClick={(e) => {
             e.preventDefault();
             scrollToSection('contact-me');

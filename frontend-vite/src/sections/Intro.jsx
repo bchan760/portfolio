@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import ContactMe from '../sections/ContactMe';
 
 const Intro = () => {
   const navigate = useNavigate();
@@ -26,12 +27,14 @@ const Intro = () => {
           >
             View My Work
           </button>
+
           <button 
-            onClick={() => navigate('/contact')}
+            onClick={() => document.getElementById('contact-me').scrollIntoView({ behavior: 'smooth' })}
             className="button-hover-secondary"
           >
             Get In Touch
           </button> 
+
         </div>
       </div>
     </section>
