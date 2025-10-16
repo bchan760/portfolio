@@ -35,8 +35,6 @@ const ContactMe = () => {
             
            </textarea>
         </div>
-        {/* <div class="form-group">
-        </div> */}
       </form>
       
     </section>
