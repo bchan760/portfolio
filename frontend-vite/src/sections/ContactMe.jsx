@@ -43,8 +43,7 @@ const ContactMe = () => {
       
       <div>
         <div>
-          <form>
-            <div>
+            <div> {/*form input for name */}
               {/* note to self, 
               htmlFor vs for == React JSX vs Html, htmlFor ultimately converts it into html's for
               when compiled to the DOM
@@ -64,16 +63,32 @@ const ContactMe = () => {
               />
             </div>
 
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Email</label>
-              <textarea></textarea>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email"
+                value={formData.email} 
+                onChange={handleChange}
+                required 
+                className=""
+                placeholder="bob@example.com"
+              />
             </div>
 
-            <div class="form-group">
-              <label for="exampleFormControlSelect2">Message</label>
-              <textarea rows={3}></textarea>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea 
+                id="message" 
+                name="message"
+                value={formData.message} 
+                onChange={handleChange}
+                required 
+                className=""
+                placeholder="Your message here..."
+              ></textarea>
             </div>
-          </form>
         </div>
       </div>
       
