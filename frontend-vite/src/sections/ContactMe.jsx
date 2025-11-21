@@ -51,14 +51,14 @@ const ContactMe = () => {
               </div>
           )}
 
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-4"> {/* put name and email on the same line */}
+          <div className="mb-6 grid grid-cols-2 md:grid-cols-2 gap-4"> {/* put name and email on the same line */}
             <div> 
               {/*form input for name */}
               {/* note to self, 
               htmlFor vs for == React JSX vs Html, htmlFor ultimately converts it into html's for
               when compiled to the DOM
               */}
-              <label htmlFor="name" className="block border border-blue-500 text-purple-400 font-semibold mb-2"> {/* remove border once done */}
+              <label htmlFor="name" className="block text-purple-500 font-semibold mb-2"> {/* remove border once done */}
                 Name
               </label>
               <input 
@@ -74,7 +74,7 @@ const ContactMe = () => {
             </div>
 
             <div>
-              <label htmlFor="email" className="block border border-blue-500 text-purple-400 font-semibold mb-2">
+              <label htmlFor="email" className="block text-purple-500 font-semibold mb-2">
                 Email
               </label>
               <input 
@@ -90,8 +90,8 @@ const ContactMe = () => {
             </div>
           </div>
 
-            <div>
-              <label htmlFor="message" className="block border border-blue-500 text-purple-400 font-semibold mb-2">
+            <div className="mb-6">
+              <label htmlFor="message" className="block text-purple-500 font-semibold mb-2">
                 Message
               </label>
               <textarea 
@@ -105,12 +105,12 @@ const ContactMe = () => {
               ></textarea>
             </div>
 
-            <div>
+            <div className="flex justify-end">
               <button 
                 type="submit button" 
                 onClick={handleMessageSubmit}
                 disabled={isSubmitting || isSubmitted}
-                className="px-4 py-2 rounded-md block border border-blue-500 text-purple-400 font-semibold mb-2 hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+                className="px-4 py-3 bg-purple-500 rounded-md text-white font-semibold mb-2 hover:bg-purple-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Sending...' : isSubmitted ? 'Sent!' : 'Send Message'}
               </button>
