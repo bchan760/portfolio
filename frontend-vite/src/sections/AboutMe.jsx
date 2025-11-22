@@ -13,35 +13,43 @@ const AboutMe = () => {
     // Placeholder, will add logic to redirect to different page or show more content
     console.log("Read More clicked");
   };
+
   return (
-    <section id="about-me" className="h1-text-size min-h-[60vh]">
-      <h2 className="text-center mb-8">{ABOUT_CONTENT.title}</h2>
+    <section id="about-me" 
+      className="h1-text-size min-h-screen flex items-center">
 
-      <div className="flex flex-col md:flex-row items-center gap-8 mt-4">
-        {/* Left side text*/}
-        <div className="flex-1 md:w-1/2 md:text-left justify-center px-20 md:px-12 lg:px-16 py-6 md:ml-16 lg:ml-24">
-          {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
-            <p className="h2-text-size mb-4" key={index}>{paragraph}</p>
-          ))}
+      <div className="w-full px-4 md:px-8 lg:px-16">
+        <h2 className="text-6xl md:text-5xl text-center mb-16 text-white font-bold">
+          {ABOUT_CONTENT.title}
+        </h2>
 
-          <button 
-            onClick={handleReadMore}
-            className="mt-4 px-4 py-4 bg-transparent border-2 border-[#C778DD] text-white hover:bg-[#C778DD] transition-colors duration-300">
-            Read More
-            <span className="transition-transform duration-300 group-hover:translate-x-10">→</span>
-          </button>
-        </div>
+        <div className="flex flex-col md:flex-row items-center gap-12 mt-8">
+          {/* Left side text*/}
+          <div className="flex-1 md:w-1/2 md:text-left px-20 md:px-12 lg:px-16 py-6 md:ml-16 lg:ml-24">
+            {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
+              <p className="h2-text-size mb-4" key={index}>{paragraph}</p>
+            ))}
 
-        {/* Right side image */}
-        <div className='w-full md:w-1/2 flex justify-center'>
-          <div className="w-64 h-64 bg-gray-200 rounded-full flex items-center">
-            <img 
-              src={aboutImage} 
-              alt="Profile" 
-              className="rounded-full w-full h-full shadow-lg" 
-              />
+            <button 
+              onClick={handleReadMore}
+              className="mt-4 px-4 py-4 bg-transparent border-2 border-[#C778DD] text-white hover:bg-[#C778DD] transition-colors duration-300">
+              Read More
+              <span className="transition-transform duration-300 group-hover:translate-x-10">→</span>
+            </button>
+          </div>
+
+          {/* Right side image */}
+          <div className='w-full md:w-1/2 flex justify-center'>
+            <div className="w-64 h-64 bg-gray-200 rounded-full flex items-center">
+              <img 
+                src={aboutImage} 
+                alt="Profile" 
+                className="rounded-full w-full h-full shadow-lg" 
+                />
+            </div>
           </div>
         </div>
+
       </div>
 
 
