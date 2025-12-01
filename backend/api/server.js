@@ -43,11 +43,11 @@ export default async function serverlessHandler(req, res) {
     }
 
     // email contents
-    const mailContents = {
-        from: process.env.EMAIL_USER,
-        to: process.env.EMAIL_USER,
+    const emailContents = {
+        from: process.env.MY_EMAIL,
+        to: process.env.VERIFIED_SENDER_EMAIL,
         replyTo: email,  // This makes "Reply" go to them
-        subject: `Contact Form: ${name} (${email})`, 
+        subject: `Portfolio Contact Form: ${name}`, 
         html: 
         `   <h3>New Contact Form Submission</h3>
             <p><strong>From:</strong> ${name} (${email})</p>
@@ -55,7 +55,7 @@ export default async function serverlessHandler(req, res) {
             <p>${message}</p>`
     };
     try {
-        await transporter.sendMail(mailContents);
+        await sgmail.send(emailContents);
         res.status(200).json({
             success: true
         });
