@@ -1,35 +1,47 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import nodemailer from "nodemailer";
+import sgmail from "@sendgrid/mail";
+// import nodemailer from "nodemailer";
 // import contactRoutes from "./routes/contact.js";
 
 dotenv.config();
 
 const app = express();
 
-// mid ware
 app.use(cors());
 app.use(express.json());
 
-// grab info from contact form
-app.post('/api/contact', async (req, res) => {
+sgmail.setApiKey(process.env.SENDGRID_API_KEY);
+
+
+// vercel serverless handler for contact form
+export default async function serverlessHandler(req, res) {
+
+    if (req.method !== 'POST') {
+        return res.status(405).json({
+            success: false,
+            error: "Wrong method."
+        });
+    }
+
     const {name, address, message} = req.body;
-    //invalid input handling
+
     if (!name || !address || !message){
         return res.status(400).json({
             success: false,
             error: "All fields are required!"
         });
     }
-    // use JS module good for emails
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAILADDRESS,
-            pwd: process.env.EMAILPWD
-        }
-    }); 
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex) {
+        return res.status(400).json({
+            success: false,
+            error: "Invalid email format."
+        });
+    }
+
     // email contents
     const mailContents = {
         from: process.env.EMAIL_USER,
@@ -42,7 +54,6 @@ app.post('/api/contact', async (req, res) => {
             <hr>
             <p>${message}</p>`
     };
-    // finish this try catch block, then test
     try {
         await transporter.sendMail(mailContents);
         res.status(200).json({
@@ -50,9 +61,12 @@ app.post('/api/contact', async (req, res) => {
         });
     } catch (error){
         console.log("errorororororor");
+        res.status(500).json({
+            success: false,
+            error: "Email failed to send."
+        })
     };
-});
-
+};
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => 
