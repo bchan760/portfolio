@@ -1,7 +1,6 @@
 # portfolio
  
-A lil refresher on how to use React.
+A lil refresher on how to use React. Exploring Vercel and making a portfolio
 
 To run:
-
-npm run dev
+vercel dev
