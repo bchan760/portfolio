@@ -24,7 +24,7 @@ const ContactMe = () => {
 
     // validate form data
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-      setError('Please fill in all required fields.');
+      setError('Please fill in all fields.');
       return;
     }
 
@@ -34,7 +34,7 @@ const ContactMe = () => {
     // however, not working yet, need to add cors in backend
     // also need to check if message is empty/too many messages sent in a short period of time 
     try {
-      const response = await fetch('http://localhost:3001/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

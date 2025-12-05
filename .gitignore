@@ -10,3 +10,5 @@ package-lock.json
 
 logs/
 *.log
+.vercel
+.env*.local

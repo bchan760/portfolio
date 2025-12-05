@@ -56,7 +56,8 @@ export default async function serverlessHandler(req, res) {
     };
     try {
         await sgmail.send(emailContents);
-        res.status(200).json({
+        
+        return res.status(200).json({
             success: true
         });
     } catch (error){
