@@ -2,8 +2,6 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import sgmail from "@sendgrid/mail";
-// import nodemailer from "nodemailer";
-// import contactRoutes from "./routes/contact.js";
 
 dotenv.config();
 
@@ -69,7 +67,7 @@ export default async function serverlessHandler(req, res) {
     };
 };
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT;
 app.listen(PORT, () => 
     console.log(`Server running on port ${PORT}`)
 );
