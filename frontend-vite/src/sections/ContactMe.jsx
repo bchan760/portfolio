@@ -30,9 +30,8 @@ const ContactMe = () => {
     }
 
     setIsSubmitting(true);
-    
+
     // setting up custom backend endpoint to handle contact form submissions
-    // however, not working yet, need to add cors in backend
     // also need to check if message is empty/too many messages sent in a short period of time 
     try {
       const response = await fetch('/api/contact', {
@@ -45,11 +44,21 @@ const ContactMe = () => {
       
       /* Debugging */
       const jsonContent = response.headers.get('Content-Type');
+      // console.log("This is the content: ", jsonContent);
       if (!jsonContent || !jsonContent.includes('application/json')) {
         throw new Error('Server returned non-JSON response');
       }
 
+      // console.log("Response status: ", response.status);
+
       const data = await response.json();
+
+      // console.log("Response data", data);
+
+      // console.log('Form data before sending:', formData);
+      // console.log('Name:', formData.name);
+      // console.log('Email:', formData.email);
+      // console.log('Message:', formData.message);
 
       if (data.success) {
         setIsSubmitting(false);
