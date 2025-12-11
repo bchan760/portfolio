@@ -44,21 +44,11 @@ const ContactMe = () => {
       
       /* Debugging */
       const jsonContent = response.headers.get('Content-Type');
-      // console.log("This is the content: ", jsonContent);
       if (!jsonContent || !jsonContent.includes('application/json')) {
         throw new Error('Server returned non-JSON response');
       }
 
-      // console.log("Response status: ", response.status);
-
       const data = await response.json();
-
-      // console.log("Response data", data);
-
-      // console.log('Form data before sending:', formData);
-      // console.log('Name:', formData.name);
-      // console.log('Email:', formData.email);
-      // console.log('Message:', formData.message);
 
       if (data.success) {
         setIsSubmitting(false);
@@ -90,7 +80,7 @@ const ContactMe = () => {
         </p>
       </div>
       
-      <div className="w-full max-w-2xl bg-white rounded-xl shadow-[0_4px_20px_rgba(168,85,247,0.45)] p-8 mt-32">
+      <div className="w-full max-w-2xl bg-white rounded-xl shadow-[0_4px_20px_rgba(168,85,247,0.45)] p-8 mt-8">
         
         {error && (
             <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
