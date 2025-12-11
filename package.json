@@ -13,8 +13,8 @@
     "@sendgrid/mail": "^8.1.6",
     "bootstrap": "^5.3.8",
     "lucide-react": "^0.511.0",
-    "nodemailer": "^7.0.10",
-    "react-router-dom": "^7.2.0"
+    "react-router-dom": "^7.2.0",
+    "resend": "^6.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

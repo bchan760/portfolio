@@ -1,6 +1,6 @@
-import sgmail from "@sendgrid/mail";
+import { Resend } from "resend";
 
-sgmail.setApiKey(process.env.SENDGRID_API_KEY);
+const resend = new Resend(process.env.RESENDAPIKEY);
 
 // vercel needs this to parse json/req bodies
 export const config = {
@@ -22,14 +22,11 @@ export default async function serverlessHandler(req, res) {
         });
     }
 
+    // console.log(req.body);
+
     const name = req.body.name;
-    const address = req.body.address;
+    const address = req.body.email;
     const message = req.body.message;
-
-    console.log('Extracted name:', name);
-    console.log('Extracted email:', address);
-    console.log('Extracted message:', message);
-
     
     if (!name || !address || !message){
         console.log('Missing fields');
@@ -48,30 +45,34 @@ export default async function serverlessHandler(req, res) {
         });
     }
 
-    // email contents
-    const emailContents = {
-        from: process.env.MY_EMAIL,
-        to: process.env.VERIFIED_SENDER_EMAIL,
-        replyTo: address,  // This makes "Reply" go to them
-        subject: `Portfolio Contact Form: ${name}`, 
-        html: 
-        `   <h3>New Contact Form Submission</h3>
-            <p><strong>From:</strong> ${name} (${address})</p>
-            <hr>
-            <p>${message}</p>`
-    };
     try {
-        await sgmail.send(emailContents);
+        const emailContents = await resend.emails.send({
+            from: "onboarding@resend.dev",
+            to: process.env.RECIPIENT_EMAIL,
+            replyTo: address,
+            subject: `New Submission from Portfolio: ${name}`, 
+            html: 
+            `   <h3>New Contact Form Submission</h3>
+                <p><strong>From:</strong> ${name} (${address})</p>
+                <hr>
+                <p><strong>Message:</strong></p>
+                <p>${message}</p>
+            `
+        });
+
+        // console.log("Email has been sent: ", emailContents);
         
         return res.status(200).json({
             success: true,
-            message: "Success!"
+            message: "Email sent successfully!"
         });
     } catch (error){
-        console.log("errorororororor");
+        // console.log("Resend API isn't working", error);
+        // console.error("Error response:", error.response?.body);
         res.status(500).json({
             success: false,
-            error: "Email failed to send."
+            error: "Email failed to send.",
+            details: error.message
         })
     };
 };
