@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 const HeaderNav = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -20,8 +18,26 @@ const HeaderNav = () => {
         >
           #resume
         </a>
-        <a href="/works" className="text-underline">#my-works</a>
-        <a href="/about-me" className="text-underline">#about-me</a>
+
+        <a href="#projects" 
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('projects');
+          }}className="text-underline"
+        >
+          #my-works
+        </a>
+
+        <a href="#about-me" 
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('about-me');
+          }}
+          className="text-underline"
+        >
+          #about-me
+        </a>
+
         <a href="#contact-me" 
           onClick={(e) => {
             e.preventDefault();

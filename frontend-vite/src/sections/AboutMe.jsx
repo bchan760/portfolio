@@ -1,4 +1,6 @@
 import aboutImage from '../assets/about.jpg';
+import { useNavigate } from 'react-router-dom';
+import about from '../pages/About';
 
 const ABOUT_CONTENT = {
   title: "About Me",
@@ -9,9 +11,11 @@ const ABOUT_CONTENT = {
 };
 
 const AboutMe = () => {
+  const navigate = useNavigate();
+
   const handleReadMore = () => {
-    // Placeholder, will add logic to redirect to different page or show more content
-    console.log("Read More clicked");
+    navigate('/about-me');
+    // console.log("Read More clicked");
   };
 
   return (

@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import ContactMe from '../sections/ContactMe';
 
 const Intro = () => {
   const navigate = useNavigate();

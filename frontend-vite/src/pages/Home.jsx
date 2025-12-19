@@ -9,7 +9,7 @@ import Skills from '../sections/Skills';
 import AboutMe from '../sections/AboutMe';
 import ContactMe from '../sections/ContactMe';
 
-const Landing = () => {
+const Home = () => {
   const [activeSection, setActiveSection] = useState('who-i-am');
   const [isAtBottom, setIsAtBottom] = useState(false);
 
@@ -64,4 +64,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Home;
