@@ -5,7 +5,6 @@ import BacktoTop from '../components/BacktoTop';
 import MyFooter from '../components/MyFooter';
 import Intro from '../sections/Intro';
 import MyProjects from '../sections/MyProjects';
-import Skills from '../sections/Skills';
 import AboutMe from '../sections/AboutMe';
 import ContactMe from '../sections/ContactMe';
 
@@ -56,7 +55,7 @@ const Home = () => {
       
       <Intro />
       <MyProjects />
-      <Skills />
+      {/* <Skills /> */}
       <AboutMe />
       <ContactMe />
       <MyFooter isAtBottom={isAtBottom}/>

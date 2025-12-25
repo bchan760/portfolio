@@ -6,37 +6,47 @@ const MyProjects = () => {
     {
       id: 1,
       title: "Moodi",
+      // image: ,
       description: "Webapp to find new songs to add to your playlist.",
-      technologies: ["Lit", "Express.js", "PostgreSQL", "Microsoft Azure"]
+      technologies: ["Lit", "Express.js", "PostgreSQL", "Microsoft Azure"],
+      githubLink: ''
     },
     {
       id: 2,
       title: "ClAI",
+      // image: ,
       description: "AI program that reads your resume to automatically create a cover letter.",
-      technologies: ["Python", "Flask", "OpenAI API"]
+      technologies: ["Python", "Flask", "OpenAI API"],
+      githubLink: ''
     },
     {
       id: 3,
       title: "todoList",
+      // image: ,
       description: "React webapp to organize and coordinate your tasks.",
-      technologies: ["React.js", "Express.js", "Microsoft Azure"]
+      technologies: ["React.js", "Express.js", "Microsoft Azure"],
+      githubLink: ''
     },
     {
       id: 4,
       title: "My Research Paper",
+      // image: ,
       description: "A comprehensive study on providing equitable opportunities with Machine Learning.",
-      technologies: ["Scikit-learn", "Python", "Pandas", "Matplotlib"]
+      technologies: ["Scikit-learn", "Python", "Pandas", "Matplotlib"],
+      githubLink: ''
     },
     {
       id: 5,
       title: "Portfolio",
+      // image: ,
       description: "You're looking at it right now!",
-      technologies: ["React.js", "Vite", "Tailwind CSS"]
+      technologies: ["React.js", "Vite", "Tailwind CSS"],
+      githubLink: ''
     }
   ];
 
-  const handleLearnMore = (projectId) => {
-    console.log(`This will be updated later ${projectId}`);
+  const handleLearnMore = (githubLink) => {
+    // console.log(`This will be updated later ${projectId}`);
   };
 
   return (
@@ -54,9 +64,11 @@ const MyProjects = () => {
             <ProjectCard
               key={project.id}
               id={project.id}
+              image={project.image}
               title={project.title}
               description={project.description}
               technologies={project.technologies}
+              githubLink={project.githubLink}
               onLearnMore={handleLearnMore}
             />
           ))}
