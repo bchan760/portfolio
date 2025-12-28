@@ -7,7 +7,7 @@ const MyProjects = () => {
       id: 1,
       title: "Moodi",
       // image: ,
-      description: "Webapp to find new songs to add to your playlist.",
+      description: "Webapp that suggests new songs to seamlessly add to your Spotify playlist.",
       technologies: ["Lit", "Express.js", "PostgreSQL", "Microsoft Azure"],
       githubLink: ''
     },
@@ -31,9 +31,9 @@ const MyProjects = () => {
       id: 4,
       title: "My Research Paper",
       // image: ,
-      description: "A comprehensive study on providing equitable opportunities with Machine Learning.",
+      description: "A comprehensive study on using Machine Learning to provide equitable opportunities in the research field.",
       technologies: ["Scikit-learn", "Python", "Pandas", "Matplotlib"],
-      githubLink: ''
+      githubLink: 'https://drive.google.com/file/d/10ktzlgwW7tMWVQ17NiFaald_isEe1jo-/view?usp=sharing'
     },
     {
       id: 5,
@@ -46,7 +46,8 @@ const MyProjects = () => {
   ];
 
   const handleLearnMore = (githubLink) => {
-    // console.log(`This will be updated later ${projectId}`);
+    // console.log(`This is the link: ${githubLink}`);
+    window.open(githubLink, '_blank');
   };
 
   return (
@@ -63,7 +64,6 @@ const MyProjects = () => {
           {projects.map((project) => (
             <ProjectCard
               key={project.id}
-              id={project.id}
               image={project.image}
               title={project.title}
               description={project.description}

@@ -4,7 +4,7 @@ const ProjectCard = ({
   description, 
   technologies = [], 
   icon, 
-  iconSize = 48,
+  githubLink,
   onLearnMore 
 }) => {
   const IconComponent = icon;
@@ -20,7 +20,11 @@ const ProjectCard = ({
           </span>
         ))}
       </div>
-      <button className="card-learnmore" onClick={() => onLearnMore && onLearnMore(id)}>
+      <button 
+        className="card-learnmore" 
+        onClick={() => onLearnMore && onLearnMore(githubLink)}
+        disabled={!githubLink}
+      >
         Learn More <span className="card-arrow">→</span>
       </button>
     </div>
