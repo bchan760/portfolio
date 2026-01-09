@@ -1,6 +1,6 @@
 import aboutImage from '../assets/about.jpg';
 import { useNavigate } from 'react-router-dom';
-import about from '../pages/About';
+// import about from '../pages/About';
 
 const ABOUT_CONTENT = {
   title: "About Me",
@@ -19,11 +19,10 @@ const AboutMe = () => {
   };
 
   return (
-    <section id="about-me" 
-      className="h1-text-size min-h-screen flex items-center">
+    <section id="about-me" className="h1-text-size min-h-screen flex">
 
-      <div className="w-full px-4 md:px-8 lg:px-16">
-        <h2 className="text-6xl md:text-5xl text-center mb-16 text-white font-bold">
+      <div className="content-wrapper">
+        <h2 className="text-6xl md:text-5xl text-left mb-16 text-white font-bold">
           {ABOUT_CONTENT.title}
         </h2>
 

@@ -174,11 +174,11 @@
     @apply min-h-screen flex items-center justify-center;
   }
   
-  .myprojects-header {
-    @apply text-center mb-16;
+  .header {
+    @apply text-left mb-16;
   }
   
-  .myprojects-content-wrapper {
+  .content-wrapper {
     @apply mx-auto px-8 md:px-16 lg:px-24 xl:px-32;
   }
   

@@ -1,4 +1,3 @@
-import { Code } from 'lucide-react';
 import ProjectCard from '../components/ProjectCard';
 
 const MyProjects = () => {
@@ -52,10 +51,8 @@ const MyProjects = () => {
 
   return (
     <section id="projects" className="myprojects-bg">
-      <div className="myprojects-content-wrapper">
-        <div className="myprojects-header">
-          {/* temp icon until get something better */}
-          <Code size={60} className="mx-auto mb-6 text-blue-600" /> 
+      <div className="content-wrapper">
+        <div className="text-6xl md:text-5xl text-left mb-16 text-white font-bold">
           <h2 className="myprojects-title">My Projects</h2>
           <p className="myprojects-subtitle">Here are some of my recent works</p>
         </div>

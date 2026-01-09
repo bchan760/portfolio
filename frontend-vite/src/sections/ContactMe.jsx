@@ -72,12 +72,15 @@ const ContactMe = () => {
   };
 
   return (
-    <section id="contact-me" className="min-h-screen flex flex-col items-center justify-center relative">
-      <div className="w-full max-w-2xl text-center mb-12 px-4">
+    <section id="contact-me" className="min-h-screen flex flex-col items-center relative">
+      <div className="content-wrapper">
+        <div className="text-6xl md:text-5xl text-left mb-16 text-white font-bold">
         <h2 className="h1-text-size">Contact Me</h2>
         <p className="h2-text-size">
           If you have any questions or just want to say hello, feel free to reach out!
         </p>
+      </div>
+
       </div>
       
       <div className="w-full max-w-2xl bg-white rounded-xl shadow-[0_4px_20px_rgba(168,85,247,0.45)] p-8 mt-8">
