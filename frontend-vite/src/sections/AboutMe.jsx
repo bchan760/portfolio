@@ -1,6 +1,5 @@
 import aboutImage from '../assets/about.jpg';
 import { useNavigate } from 'react-router-dom';
-// import about from '../pages/About';
 
 const ABOUT_CONTENT = {
   title: "About Me",
@@ -28,11 +27,12 @@ const AboutMe = () => {
 
         <div className="flex flex-col md:flex-row items-center gap-12 mt-8">
           {/* Left side text*/}
-          <div className="flex-1 md:w-1/2 md:text-left px-20 md:px-12 lg:px-16 py-6 md:ml-16 lg:ml-24">
+          <div className="px-20 md:px-12 lg:px-16 md:ml-16 lg:ml-24">
             {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
               <p className="h2-text-size mb-4" key={index}>{paragraph}</p>
             ))}
 
+            {/* read more button */}
             <button 
               onClick={handleReadMore}
               className="mt-4 px-4 py-4 bg-transparent border-2 border-[#C778DD] text-white hover:bg-[#C778DD] transition-colors duration-300">

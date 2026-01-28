@@ -15,7 +15,6 @@ const Home = () => {
   const sections = [
     { id: 'intro', title: 'Introduction', icon: User },
     { id: 'projects', title: 'Projects', icon: Code },
-    { id: 'skills', title: 'Skills', icon: Award },
     { id: 'about-me', title: 'About Me', icon: Info },
     { id: 'contact-me', title: 'Contact Me', icon: Mail },
   ];
